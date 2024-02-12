@@ -1,0 +1,30 @@
+name: symfony-example
+disable_settings_management: true
+type: php
+docroot: public
+php_version: "8.3"
+webserver_type: nginx-fpm
+xdebug_enabled: false
+additional_hostnames: []
+additional_fqdns: []
+database:
+    type: mariadb
+    version: "10.11"
+use_dns_when_possible: true
+composer_version: "2"
+nodejs_version: "20"
+
+disable_upload_dirs_warning: true
+
+webimage_extra_packages:
+    - php8.3-ctype
+    - php8.3-iconv
+    - php8.3-mbstring
+    - php8.3-xsl
+    - php8.3-redis
+    - php8.3-imagick
+
+web_environment:
+    - "MAILER_DSN=smtp://localhost:1025"
+    - "DATABASE_URL=mysql://db:db@db:3306/db?serverVersion=10.11.0-MariaDB&charset=utf8mb4"
+
